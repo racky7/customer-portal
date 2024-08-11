@@ -1,0 +1,32 @@
+.home-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-heading {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: row;
+  border-top: 1px solid lightgray;
+}
+
+.sidebar {
+  overflow: auto;
+  width: 300px;
+  border-right: 1px solid lightgray;
+}
+
+.customer-details {
+  flex: 1 1 0%;
+  padding: 32px;
+  overflow: auto;
+  background: #fbfbfb;
+}
