@@ -6,7 +6,7 @@ A React application rendering a list of 1,000 customers.
 
 ## Demo
 
-customer-portal-x.vercel.app
+https://customer-portal-x.vercel.app
 
 
 ## Run Locally
