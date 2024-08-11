@@ -6,16 +6,19 @@ type CustomerCardProps = {
   customer: Pick<Customer, "id" | "name" | "title">;
   isActive: boolean;
   onCardSelect: () => void;
+  style: React.CSSProperties;
 };
 
 export default function CustomerCard({
   customer,
   isActive,
   onCardSelect,
+  style,
 }: CustomerCardProps) {
   return (
     <div
       className={`card-container ${isActive ? "card-active" : ""}`}
+      style={style}
       onClick={() => {
         onCardSelect?.();
       }}
