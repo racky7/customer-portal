@@ -58,7 +58,7 @@ export default function Home() {
           {queryStatus === "success" ? (
             <div
               style={{
-                height: `${customers.length * CUSTOMER_CARD_HEIGHT}px`,
+                height: `${rowVirtualizer.getTotalSize()}px`,
                 position: "relative",
               }}
             >

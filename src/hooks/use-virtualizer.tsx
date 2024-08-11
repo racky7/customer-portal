@@ -59,5 +59,8 @@ export function useVirtualizer({
 
       return items;
     },
+    getTotalSize: () => {
+      return count * itemSize;
+    },
   };
 }
