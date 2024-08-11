@@ -1,13 +1,16 @@
 .card-container {
   padding-inline: 24px;
-  /* padding-block: 16px; */
   border-bottom: 1px solid lightgray;
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 16px;
   cursor: pointer;
-  /* height: 192px; */
+  transition: background-color 0.3s ease;
+}
+
+.card-container:hover {
+  background-color: rgba(238, 238, 238, 0.5);
 }
 
 .card-title {
