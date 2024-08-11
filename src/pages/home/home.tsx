@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { useCustomers } from "../../hooks/use-customers";
+import CustomerCard from "../../components/customer-card";
+import CustomerDetails from "../../components/customer-details/customer-details";
+import { useVirtualizer } from "../../hooks/use-virtualizer";
 import {
   CUSTOMER_CARD_HEIGHT,
   generateFakeCustomersData,
 } from "../../lib/customer";
 import { fakeApiCall } from "../../lib/utils";
-import CustomerCard from "../../components/customer-card";
 import "./home.css";
-import CustomerDetails from "../../components/customer-details/customer-details";
-import { useVirtualizer } from "../../hooks/use-virtualizer";
 
 export default function Home() {
   const { customers, activeCustomerId, setActiveCustomerId, loadCustomers } =
@@ -47,10 +47,12 @@ export default function Home() {
       <div className="main-heading">Customer Portal</div>
       <div className="main-content">
         <div className="sidebar" ref={parentRef}>
-          {queryStatus === "loading" ? <div>Loading ....</div> : null}
+          {queryStatus === "loading" ? (
+            <div className="loading">Loading ....</div>
+          ) : null}
 
           {queryStatus === "error" ? (
-            <div>Error loading customers...</div>
+            <div className="error">Error loading customers.</div>
           ) : null}
 
           {queryStatus === "success" ? (
