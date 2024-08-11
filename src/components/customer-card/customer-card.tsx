@@ -1,4 +1,6 @@
 import { Customer } from "../../types/customer";
+import { truncateText } from "../../lib/utils";
+import "./customer-card.css";
 
 type CustomerCardProps = {
   customer: Pick<Customer, "id" | "name" | "title">;
@@ -18,8 +20,10 @@ export default function CustomerCard({
         onCardSelect?.();
       }}
     >
-      <div>{customer.name}</div>
-      <div>{customer.title}</div>
+      <div className="card-title">{customer.name}</div>
+      <div className="card-description">
+        {truncateText(customer.title, 180)}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,38 @@
+.customer-details-area {
+  flex: 1 1 0%;
+  overflow: auto;
+  background: #fbfbfb;
+  padding-inline: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.no-active-customer {
+  flex: 1 1 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.customer-name {
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.customer-title {
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.customer-address {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
