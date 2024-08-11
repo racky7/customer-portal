@@ -87,6 +87,7 @@ export default function Home() {
           ) : null}
         </div>
         <CustomerDetails
+          key={activeCustomerId}
           customer={customers.find((c) => c.id === activeCustomerId)}
         />
       </div>

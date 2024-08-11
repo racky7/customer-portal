@@ -23,7 +23,7 @@ export default function CustomerCard({
         onCardSelect?.();
       }}
     >
-      <div className="card-title">{customer.name}</div>
+      <div className="card-title">{truncateText(customer.name, 30)}</div>
       <div className="card-description">
         {truncateText(customer.title, 180)}
       </div>
