@@ -32,7 +32,6 @@ export default function Home() {
       setQueryStatus("success");
       loadCustomers(customersData);
     } catch (error) {
-      console.log(error);
       setQueryStatus("error");
     }
   };
